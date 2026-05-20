@@ -9,7 +9,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet("chapter4/Practice01")
+@WebServlet("/chapter4/Practice01")
 public class Practice01 extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -19,8 +19,8 @@ public class Practice01 extends HttpServlet {
 
 		request.setCharacterEncoding("UTF-8");
 
-		java.time.format.DateTimeFormatter fmt = java.time.format.DateTimeFormatter.ofPattern("yyyy年MM月dd日(E)HH時㎜分ss秒");
-		String now = java.time.LocalTime.now().format(fmt);
+		java.time.format.DateTimeFormatter fmt = java.time.format.DateTimeFormatter.ofPattern("yyyy年MM月dd日(E)HH時mm分ss秒");
+		String now = java.time.LocalDateTime.now().format(fmt);
 		out.println("""
 				<html><body>
 				<p>現在の時刻は
