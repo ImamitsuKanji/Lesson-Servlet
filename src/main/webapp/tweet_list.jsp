@@ -19,8 +19,8 @@
 		<ul class="tweet-list">
 			<li>
 				<div class="tweet-content">
-					<p>content（ツイート内容）</p>
-					<p class="tweet-info">投稿者: author - 投稿日時: posted_at</p>
+					<p>${tweets.content}（ツイート内容）</p>
+					<p class="tweet-info">投稿者: ${tweets.author } - 投稿日時: ${tweets.postedAt}</p>
 				</div>
 			</li>
 		</ul>
